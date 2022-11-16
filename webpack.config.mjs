@@ -12,7 +12,6 @@ const target = mode === 'development' ? 'web' : 'browserslist'
 export default {
 	mode: mode,
 	target: target,
-	// context: __dirname + '/src',
 
 	entry: {
 		bundle: {
@@ -20,10 +19,6 @@ export default {
 			filename: './scripts/[name].min.js'
 		}
 	},
-
-	// output: {
-  //   path: resolve(__dirname, 'dist')
-	// },
 
 	module: {
 		rules: [
@@ -55,10 +50,10 @@ export default {
 					{
 						loader: 'sass-loader',
 						options: {
-              sassOptions: {
-                includePaths: ['node_modules']
-              }
-            }
+							sassOptions: {
+								includePaths: ['node_modules']
+							}
+						}
 					}
 				]
 			},
@@ -155,31 +150,31 @@ export default {
 	],
 
 	optimization: {
-    minimizer: [
-      '...',
+		minimizer: [
+			'...',
 			new ImageMinimizerPlugin({
 				deleteOriginalAssets: true,
 				minimizer: {
 					implementation: ImageMinimizerPlugin.squooshMinify,
-          options: {
-            encodeOptions: {
-              mozjpeg: {
-                quality: 84,
-              },
-              webp: {
+					options: {
+						encodeOptions: {
+							mozjpeg: {
+								quality: 84,
+							},
+							webp: {
 								quality: 90,
-              },
+							},
 							oxipng: {
 								level: 4,
 								interlace: true,
 								// strip: 'all'
 							}
-            },
-          },
+						},
+					},
 				}
 			})
-    ]
-  },
+		]
+	},
 
 	resolve: {
 		extensions: ['.js', '.jsx'],
@@ -187,9 +182,6 @@ export default {
 			handlebars: 'handlebars/dist/handlebars.js',
 		}
 	},
-	// stats: {
-	// 	children: true
-	// },
 
 	devtool: mode === 'development' ? 'source-map' : false,
 	performance: {
@@ -205,11 +197,8 @@ export default {
 
 	devServer: {
 		open: true,
-    liveReload: true,
+		liveReload: true,
 		hot: false,
-    // watchFiles: [
-		// 	resolve('src/templates/*.hbs')
-		// ],
 		port: 3000,
 		static: {
 			directory: resolve(__dirname, 'dist'),
