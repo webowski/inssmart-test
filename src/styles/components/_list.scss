@@ -1,0 +1,62 @@
+ol {
+	@include listReset;
+	@include flowMargin;
+	width: fit-content;
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
+  column-gap: 24px;
+
+	> li {
+		counter-increment: items;
+		position: relative;
+		padding-left: 22px;
+	}
+
+	> li:before {
+		@include pseudoBlock(20px, auto);
+		content: counter(items) ". ";
+		left: 0;
+		top: auto;
+	}
+
+	> li + li {
+		margin-top: 16px;
+	}
+
+	> li:first-child {
+		margin-top: 0;
+	}
+
+	@include mediaUp(sm) {
+		column-count: 2;
+	}
+}
+
+ul.marker-bike {
+	@include listReset;
+	width: fit-content;
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
+	column-count: 1;
+  column-gap: 24px;
+
+	> li {
+		position: relative;
+		padding-left: 36px;
+	}
+
+	> li:before {
+		@include pseudoBlock(20px, 18px);
+		content: url('../images/icons/bicycle.svg');
+		left: 0;
+		top: 2px;
+	}
+
+	> li + li {
+		margin-top: 16px;
+	}
+
+	@include mediaUp(sm) {
+		column-count: 2;
+	}
+}

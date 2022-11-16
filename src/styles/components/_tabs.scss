@@ -1,0 +1,129 @@
+.tabs {
+	position: relative;
+	grid-column: span 12;
+
+	@include mediaUp(lg) {
+		grid-column: span 10;
+	}
+
+	@include mediaUp(xl) {
+		grid-column: span 8;
+	}
+
+	@include mediaUp(xxl) {
+		grid-column: span 6;
+	}
+}
+
+.tabs__nav {
+	@include listReset(true);
+	display: none;
+
+	@include mediaUp(md) {
+		display: flex;
+	}
+}
+
+.tabs__nav-item {
+	padding: 22px 20px;
+	background-color: var(--muted);
+	cursor: pointer;
+	border-top-left-radius: $radius-md;
+	border-top-right-radius: $radius-md;
+	font-size: var(--fontSize-xl);
+	font-weight: 500;
+
+	@include mediaUp(md) {
+		padding: 20px 24px;
+	}
+}
+
+.tabs__nav-item.is-open {
+	background-color: var(--bgLight);
+	color: var(--brand);
+	cursor: default;
+}
+
+.tabs__item	{
+	padding: 30px 20px;
+	background-color: var(--bgLight);
+	border-radius: $radius-lg;
+	overflow: hidden;
+
+	@include mediaUp(sm) {
+		padding: 30px 30px;
+	}
+
+	@include mediaUp(md) {
+		display: none;
+		padding: 35px 40px;
+		border-top-left-radius: 0;
+	}
+
+	@include mediaUp(xl) {
+		padding: 40px 60px;
+	}
+}
+
+.tabs__item + .tabs__item {
+	@include mediaDown(md) {
+		margin-top: 1.25rem;
+	}
+}
+
+.tabs__item.is-open {
+	display: block;
+}
+
+.tabs__item-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: var(--fontSize-xl);
+	font-weight: 500;
+	padding: 30px 20px;
+	margin: -30px -20px;
+	position: relative;
+	z-index: 1;
+
+	@include mediaUp(sm) {
+		padding: 30px 30px;
+		margin: -30px -20px;
+	}
+
+	@include mediaUp(md) {
+		display: none;
+	}
+}
+
+.tabs__item.is-open .tabs__item-header {
+	color: var(--brand);
+}
+
+.tabs__item-arrow {
+	width: 16px;
+	height: 8px;
+	margin-left: 18px;
+	transform: rotate(180deg);
+	transition: transform $duration-md;
+}
+
+.tabs__item.is-open .tabs__item-arrow {
+	transform: rotate(0deg);
+}
+
+.tabs__item-content {
+	@include mediaDown(md) {
+		opacity: 0;
+		height: 0;
+		transition: opacity $duration-md, margin-top $duration-md;
+	}
+}
+
+.tabs__item.is-open .tabs__item-content {
+	@include mediaDown(md) {
+		opacity: 1;
+		height: auto;
+		margin-top: 30px;
+	}
+}

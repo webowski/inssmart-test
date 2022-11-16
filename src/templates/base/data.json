@@ -1,0 +1,7 @@
+{
+  "lang": "ru",
+  "nav": [
+    { "url": "/", "title": "Homepage" },
+    { "url": "/about.html", "title": "About" }
+  ]
+}

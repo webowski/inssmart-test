@@ -1,0 +1,73 @@
+// Text
+// ---------------------
+$fontSans:                  'Montserrat', sans-serif;
+$fontMain:                  $fontSans;
+$rem:                       16px;
+$fontSize:                  1rem;
+$lineHeight:                1.5;
+
+
+// Colors
+// ---------------------
+// absolute colors
+$white:                     #FFF;
+$black:                     #0C0C0C;
+$blue:                      #3922C5;
+$grayDark:                  #494949;
+$grayLight:                 #D9D9D9;
+$grayLightest:              #F4F4F4;
+
+// semantic colors
+$brand:                     $blue;
+$intense:                   $black;
+$major:                     $grayDark;
+$muted:                     $grayLight;
+$mutedLight:                $grayLightest;
+$inverse:                   $white;
+$bg:                        $grayLightest;
+$bgLight:                   $white;
+$border:                    $grayLight;
+
+
+// Shapes
+// ---------------------
+$radius-md:                 16px;
+$radius-lg:                 20px;
+
+
+// Breakpoints
+// ---------------------
+$xs:    0;
+$sm:    576px;
+$md:    768px;
+$lg:    992px;
+$xl:    1200px;
+$xxl:   1600px;
+
+$breakpoints: (
+	xs: $xs,
+	sm: $sm,
+	md: $md,
+	lg: $lg,
+	xl: $xl,
+	xxl: $xxl,
+);
+
+
+// Container
+// ---------------------
+$containerMax:              1800px;
+
+
+// Grid
+// ---------------------
+$gridColumns:               12;
+
+
+// Transition & Animation
+// ---------------------
+$duration-sm:               .12s;
+$duration-md:               .2s;
+$duration-lg:               .3s;
+$duration-xl:               .6s;
+$duration-xxl:              1s;

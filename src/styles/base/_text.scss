@@ -1,0 +1,66 @@
+html {
+	font-size: $rem;
+}
+
+body {
+	color: var(--major);
+	font-family: var(--fontMain);
+	font-size: var(--fontSize);
+	line-height: var(--lineHeight);
+}
+
+a {
+	color: var(--brand);
+	text-decoration: underline;
+	text-underline-position: under;
+	transition:
+		color $duration-sm,
+		border-color $duration-sm,
+		background-color $duration-sm,
+		box-shadow $duration-sm;
+}
+
+a:is(:hover) {
+	text-decoration: none;
+}
+
+p {
+	max-width: 72ch;
+	@include flowMargin;
+	margin-top: .9375rem;
+	margin-bottom: .9375rem;
+
+	@include mediaUp(md) {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+}
+
+h1, h2, h3,
+.h1, .h2, .h3 {
+	margin-top: 1.875rem;
+	margin-bottom: 1rem;
+	@include flowMargin;
+	color: var(--intense);
+	line-height: 1.5;
+
+	@include mediaUp(md) {
+		margin-top: 2rem;
+		margin-bottom: 1.3rem;
+	}
+}
+
+h1, .h1 {
+	font-size: var(--fontSize-2xl);
+	font-weight: 700;
+}
+
+h2, .h2 {
+	font-size: var(--fontSize-xl);
+	font-weight: 500;
+}
+
+h3, .h3 {
+	font-size: var(--fontSize-lg);
+	font-weight: 500;
+}

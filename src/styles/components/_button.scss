@@ -1,0 +1,46 @@
+.button {
+	width: auto;
+	max-width: 100%;
+	padding: 14px 24px;
+	display: inline-block;
+	border: none;
+	appearance: none;
+	background: var(--bgLight) none;
+	border-radius: $radius-md;
+	color: var(--major);
+	font-size: var(--fontSize);
+	line-height: 1.5;
+	font-weight: 400;
+	letter-spacing: 0;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	white-space: nowrap;
+	transition:
+		background-color $duration-sm,
+		color $duration-sm;
+}
+
+.button:hover {
+	color: #2C1A9A;
+}
+
+.button:active {
+	color: #1F1368;
+}
+
+.button--primary {
+	background-color: var(--brand);
+	color: var(--inverse);
+}
+
+.button--primary:hover {
+	background-color: #2C1A9A;
+	color: var(--inverse);
+}
+
+.button--primary:active {
+	background-color: #1F1368;
+	color: var(--inverse);
+}

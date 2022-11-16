@@ -1,0 +1,42 @@
+// Custom properties
+// ---------------------
+:root {
+	// Text
+	--fontMain:             #{$fontMain};
+	--lineHeight:           #{$lineHeight};
+	--fontSize:             .875rem;
+	--fontSize-lg:          1rem;
+	--fontSize-xl:          1.25rem;
+	--fontSize-2xl:         1.5rem;
+
+	// Color
+	--brand:                #{$brand};
+	--intense:              #{$intense};
+	--major:                #{$major};
+	--muted:                #{$muted};
+	--mutedLight:           #{$mutedLight};
+	--inverse:              #{$inverse};
+	--bg:                   #{$bg};
+	--bgLight:              #{$bgLight};
+	--border:               #{$border};
+
+	// Dimensions
+	--containerMax:         #{$containerMax};
+	--sidePadding:          clamp(20px, 5.35vw, 102px);
+	--headerHeight:         clamp(64px, 11vw, 104px);
+	--gap:                  24px;
+
+	// Animation
+	--duration-sm:          #{$duration-sm};
+	--duration-md:          #{$duration-md};
+	--duration-lg:          #{$duration-lg};
+	--duration-xl:          #{$duration-xl};
+
+	@include mediaUp(md) {
+		// Text
+		--fontSize:             1rem;
+		--fontSize-lg:          1.125rem;
+		--fontSize-xl:          1.375rem;
+		--fontSize-2xl:         1.625rem;
+	}
+}

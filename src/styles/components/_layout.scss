@@ -1,0 +1,19 @@
+body {
+	background-color: var(--bg);
+}
+
+.main {
+	--mainPaddingY: 40px;
+	@include container;
+	display: grid;
+	min-height: 100vh;
+	padding-top: var(--mainPaddingY);
+	padding-bottom: var(--mainPaddingY);
+	overflow-x: hidden;
+	position: relative;
+
+	@include mediaUp(lg) {
+		--mainPaddingY: 80px;
+	}
+}
+

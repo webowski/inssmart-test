@@ -1,0 +1,49 @@
+.grid {
+	@include grid;
+}
+
+@for $i from 1 through $gridColumns {
+	.col-#{$i} {
+		grid-column: span $i;
+	}
+}
+
+@include mediaUp(sm) {
+	@for $i from 1 through $gridColumns {
+		.sm\:col-#{$i} {
+			grid-column: span $i;
+		}
+	}
+}
+
+@include mediaUp(md) {
+	@for $i from 1 through $gridColumns {
+		.md\:col-#{$i} {
+			grid-column: span $i;
+		}
+	}
+}
+
+@include mediaUp(lg) {
+	@for $i from 1 through $gridColumns {
+		.lg\:col-#{$i} {
+			grid-column: span $i;
+		}
+	}
+}
+
+@include mediaUp(xl) {
+	@for $i from 1 through $gridColumns {
+		.xl\:col-#{$i} {
+			grid-column: span $i;
+		}
+	}
+}
+
+@include mediaUp(xxl) {
+	@for $i from 1 through $gridColumns {
+		.xxl\:col-#{$i} {
+			grid-column: span $i;
+		}
+	}
+}
