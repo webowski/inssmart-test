@@ -6,8 +6,9 @@
 
 .product-card__image {
 	grid-column: span 12;
-	height: fit-content;
 	width: 358px;
+	height: auto;
+	align-self: flex-start;
 
 	@include mediaDown(md) {
 		max-width: 100%;
